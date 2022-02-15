@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import {useState, useEffect} from "react";
+import {useState, useEffect, Component} from "react";
 import Login from './Components/LogIn'
 // import './App.css';
 import NavBar from "./Components/NavBar";
@@ -8,6 +8,8 @@ import Interface1 from "./Components/Interface1";
 import StockProfile from "./Components/StockProfile";
 import AccountCreation from "./Components/CreateAccount";
 import ExplanationPage from "./Components/ExplanationPage";
+import News from "./Components/News";
+import Quiz from "./Components/Quiz";
 
 // require('react-dom');
 // window.React2 = require('react');
@@ -49,6 +51,8 @@ function App() {
        <Route path="/login" element={<>   <Login setCurrentUser={setCurrentUser}/>  </>} />
        <Route path="/createAccount" element={<>   <AccountCreation/>  </>} />
        <Route path="/ExplanationPage" element={<> <ExplanationPage/> </>} />
+       <Route path="/news" element={<> <News/> </>} />
+       <Route path="/quiz" element={<> <Quiz currentUser={currentUser}/> </>} />
 </Routes>
   </BrowserRouter>
       </main>

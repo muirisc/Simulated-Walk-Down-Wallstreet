@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  height: 3rem;
 
   background-color: #3A5A40;
   color: #DAD7CD;
@@ -28,6 +29,7 @@ body {
   text-align: center;
   text-decoration: none;
   padding: 12px 20px;
+  font-size: 1.4rem;
 
 }
 .NavBar li a:hover{
@@ -329,4 +331,100 @@ box-sizing: border-box;
 
 .YourStocks{
   margin-left: 2rem;
+}
+
+.newsHeading{
+  font-size: 8rem;
+  text-align: center;
+}
+
+.newsSections{
+  display: table;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  margin-left: 2rem;
+}
+.mainNews{
+  /* width: 45rem; */
+  margin: auto;
+  width: 40rem;
+  
+}
+.sideNews{
+  width: 15rem;
+}
+.dailyQuiz{
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+.quiz{
+  background-color: #A3B18A;
+  width: 50rem;
+  padding: 2rem;
+  margin: auto;
+  border-radius: 1rem;
+  border: .25rem solid #3A5A40
+}
+
+.quizIntro{
+  font-size: 1.5rem;
+  margin-left: 3rem;
+}
+.question{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.answers{
+  display: block;
+  margin-left: 2rem;
+  margin: auto;
+  align-content: center; 
+  grid-template-rows: auto auto auto auto;
+}
+.answer{
+  margin: 1rem;
+  font-size: 1.9rem;
+}
+
+
+.answer:hover{
+font-size: 2.5rem;
+color: #DAD7CD;
+
+}
+
+.quizSection h4{
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+}
+.quizSection h3{
+  margin-left: 2rem;
+}
+.quizAnswers{
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  background-color: #A3B18A;
+  border-radius: 1rem;
+  border: .25rem solid #3A5A40;
+  width: 75rem;
+
+}
+.answerQuestion{
+  font-size: 1.5rem;
+}
+.answerText{
+  margin-left: 4rem;
+  font-size: 1.5rem;
+}
+
+.score{
+  background-color: #DAD7CD;
+  border: .25rem solid #3A5A40;
+  border-radius: 1rem;
+  width: 30rem;
+  margin-left: 2rem;
+}
+.sNews{
+  border: .2rem solid #210F04;
 }

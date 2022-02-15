@@ -15,6 +15,7 @@ function StockProfile({ currentUser }) {
   const [gameDifficulty, setGameDifficulty] = useState("freeplay");
   const [event, setEvent] = useState("Normal Day")
   const [month, setMonth] = useState(0)
+  const [color, setColor] = useState('grey')
 
   function changeDifficulty(e) {
     setGameDifficulty(e.target.name);
@@ -24,6 +25,7 @@ function StockProfile({ currentUser }) {
   function setLoan() {
     if (gameDifficulty === "advanced") {
       setLoanPayment(150.0);
+      setColor("black")
     }
     if (gameDifficulty === "medium") {
       setLoanPayment(100.0);
@@ -34,6 +36,7 @@ function StockProfile({ currentUser }) {
 
     if (gameDifficulty === "freeplay") {
       setLoanPayment(0.0);
+      setColor("red")
     }
   }
   useEffect(() => {
@@ -439,6 +442,8 @@ console.log('overallmystocks',myStocks)
           Want a challenge? Simulate taking a loan to make money on the Stock
           Market!
         </h4>
+         {/* <style jsx>{` .difficultySlider button {color: ${color}; }`}</style> */}
+
         <button onClick={changeDifficulty} name="freeplay">
           {" "}
           Freeplay{" "}
