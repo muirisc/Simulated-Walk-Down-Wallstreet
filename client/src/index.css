@@ -37,8 +37,19 @@ body {
 }
 
 ul.NavBar li.right {
-  float: right; 
+  /* float: right;  */
   margin-right: 2rem;
+}
+.rightButton{
+  float:right;
+  margin-right: 2rem;
+}
+.rightButton:hover{
+  background-color: #DAD7CD;
+}
+.rightButton button:hover{
+  background-color: #3A5A40;
+  color:#DAD7CD;
 }
 
 .loginBox {

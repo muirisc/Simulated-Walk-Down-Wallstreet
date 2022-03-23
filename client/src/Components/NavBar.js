@@ -24,7 +24,7 @@ function NavBar( {setCurrentUser, currentUser, authenticated}){
     <li> <a href="/quiz">Daily Quiz</a></li>
     {/* <li><a>{currentUser.cash}</a></li> */}
     {/* <li> <a>Welcome { currentUser ? currentUser.username : null}</a></li> */}
-    {currentUser ? <><li className="right"> <a> Welcome!  <button onClick={handleLogout}>Logout</button> </a></li></> : <li className="right"> <a href="/login">Log In </a></li> }
+    {currentUser ? <><li className="right"> <a> Welcome {currentUser.username}!</a></li> <li className="rightButton"><a><button onClick={handleLogout}>Logout</button> </a></li></> : <li className="right"> <a href="/login">Log In </a></li> }
     
     </ul>
     </nav>
