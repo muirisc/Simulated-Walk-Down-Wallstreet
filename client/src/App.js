@@ -48,7 +48,7 @@ function App() {
 
        <Route path="/" element={<>   <MainPage currentUser={currentUser} authenticated={authenticated} />  </>} />
        <Route path="/stocks" element={<>   <StockProfile currentUser={currentUser} />  </>} />
-       <Route path="/login" element={<>   <Login setCurrentUser={setCurrentUser}/>  </>} />
+       <Route path="/login" element={<>   <Login currentUser={currentUser} setCurrentUser={setCurrentUser}/>  </>} />
        <Route path="/createAccount" element={<>   <AccountCreation/>  </>} />
        <Route path="/ExplanationPage" element={<> <ExplanationPage/> </>} />
        <Route path="/news" element={<> <News/> </>} />

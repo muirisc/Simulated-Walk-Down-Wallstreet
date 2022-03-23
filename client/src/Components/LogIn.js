@@ -1,5 +1,5 @@
 import {useState} from "react";
-function LogIn( {setCurrentUser}){
+function LogIn( {currentUser, setCurrentUser}){
   const [formData,setFormData] = useState({
     username: "",
     password: ""
@@ -36,6 +36,8 @@ function handleSubmit(e){
 
   return(
   <section className="loginSection">
+  {currentUser ? <h3>Thank you for logging in!</h3>
+  :<>
   <h2 className="loginIntro"> Please enter your login information here!</h2>
   <form className="loginForm">
   <h3 className="loginIntro">Enter Your User Name & Password to Login </h3>
@@ -47,6 +49,8 @@ function handleSubmit(e){
   </form>
 
   <button className="loginButton"><a href="/createAccount"> Create An Account</a></button>
+  </>
+}
   </section>
   )
 }

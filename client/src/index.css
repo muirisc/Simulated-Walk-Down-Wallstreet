@@ -471,5 +471,32 @@ color: #DAD7CD;
   border-radius: 1rem;
   font-size: 20px;
   line-height: 30px;
-  
+}
+
+.mainPageLogin{
+  background-color: #DAD7CD;
+  border-radius: .5rem;
+  height: 2rem;
+  width: 8rem;
+  font-size: .85rem;
+  border: .25rem solid #3A5A40;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: absolute;
+  left: 47%;
+}
+.mainPageLogin a{
+  text-decoration: none;
+  color:#3A5A40;
+}
+
+.mainPageLogin a:hover{
+ background-color: #3A5A40;
+  color: #DAD7CD;
+}
+
+.mainPageLogin:visited{
+  color:#DAD7CD;
+  text-decoration: none;
 }
