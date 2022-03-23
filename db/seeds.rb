@@ -29,8 +29,8 @@ Stock11 = Stock.create(name:"Disinterested Orangutan", img:"https://nypost.com/w
 Stock12 = Stock.create(name:"Gold", img:"https://editorial.fxstreet.com/images/Markets/Commodities/Metals/Gold/stack-of-golden-bars-in-the-bank-vault-60756080_1x1.jpg", cap:"speculative", industry:'gold', price:1816.47)
 Stock13 = Stock.create(name:"Insho", img:"https://i.imgur.com/Il51x5R.jpg", cap: "Largecap", industry: "tech", price:48.45)
 Stock14 = Stock.create(name:"Omega", img:"https://i.imgur.com/JcpgR1C.jpg?1", cap: "Largecap", industry:"airline", price: 45.11)
-User1 = User.create(id: 1, username:"test", password:"test", cash: 10000.00, turn: 0, quiz_taken: false)
-UserStock1 = UserStock.create(user_id: User1.id, stock_id: Stock1.id, stock_count: 1)
+# User1 = User.create(id: 5, username:"test", password:"test", cash: 10000.00, turn: 0, quiz_taken: false)
+# UserStock1 = UserStock.create(user_id: User1.id, stock_id: Stock1.id, stock_count: 1)
 #Stocks
 # t.string :name
 # t.string :type

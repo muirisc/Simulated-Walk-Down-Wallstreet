@@ -139,7 +139,7 @@ function StockProfile({ currentUser }) {
         body: JSON.stringify({ cash: newFunds }),
       };
 
-      fetch(`/users/1}`, configObj1)
+      fetch(`/users/${currentUser.id}}`, configObj1)
         .then((r) => r.json())
         .then((data) => {
           // console.log(data);
@@ -155,7 +155,7 @@ function StockProfile({ currentUser }) {
         body: JSON.stringify({ cash: newFunds }),
       };
 
-      fetch(`/users/1}`, configObj1)
+      fetch(`/users/${currentUser.id}}`, configObj1)
         .then((r) => r.json())
         .then((data) => {
           // console.log(data);
@@ -171,7 +171,7 @@ function StockProfile({ currentUser }) {
         body: JSON.stringify({ cash: newFunds }),
       };
 
-      fetch(`/users/1}`, configObj1)
+      fetch(`/users/${currentUser.id}}`, configObj1)
         .then((r) => r.json())
         .then((data) => {
           // console.log(data);
@@ -368,7 +368,7 @@ function StockProfile({ currentUser }) {
         body: JSON.stringify({ cash: newFunds }),
       };
 
-      fetch(`/users/1}`, configObj1)
+      fetch(`/users/${currentUser.id}}`, configObj1)
         .then((r) => r.json())
         .then((data) => {
           console.log(data);
@@ -407,7 +407,7 @@ function StockProfile({ currentUser }) {
         body: JSON.stringify({ cash: newFunds }),
       };
 
-      fetch(`/users/1}`, configObj1)
+      fetch(`/users/${currentUser.id}}`, configObj1)
         .then((r) => r.json())
         .then((data) => {
           console.log(data);

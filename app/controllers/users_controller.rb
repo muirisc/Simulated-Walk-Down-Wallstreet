@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:username, :password)
+    params.permit(:username, :password, :cash, :quiz_taken)
   end
 
   def update_params

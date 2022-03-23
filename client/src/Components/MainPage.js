@@ -13,7 +13,7 @@ function MainPage({currentUser, authenticated}){
     <p> The goal of this app is to introduce our audience to the world of finance and account in a fun and engaging way.</p>
     <p> Play our parody stock market app and raise funds in a turbulent economic enviroment!</p>
 
-    {currentUser ? <p> Welcome {currentUser.name}! Thank you for logging in!</p> : <button className="mainPageLogin"><a href="/login"> Log In Here</a></button>}
+    {currentUser ? <p> Welcome {currentUser.username}! Thank you for logging in!</p> : <button className="mainPageLogin"><a href="/login"> Log In Here</a></button>}
 
 
 
