@@ -5,7 +5,7 @@ function QuizAnswers( {question}){
       return true
     }})  
 
-    console.log('qa',questionAnswers[0].answerText)
+    // console.log('qa',questionAnswers[0].answerText)
 
 console.log(question)
 

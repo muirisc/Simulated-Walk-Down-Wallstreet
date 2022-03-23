@@ -5,6 +5,8 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :password_digest
 
       t.float :cash 
+      t.integer :turn
+      t.boolean :quiz_taken
       t.timestamps
     end
   end

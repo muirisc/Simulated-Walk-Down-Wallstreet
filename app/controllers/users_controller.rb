@@ -52,6 +52,6 @@ class UsersController < ApplicationController
   end
 
   def update_params
-    params.permit(:cash)
+    params.permit(:cash, :turn, :quiz_taken)
   end
 end

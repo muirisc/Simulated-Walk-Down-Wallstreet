@@ -43,7 +43,7 @@ function App() {
       <body>
         <main>
      <BrowserRouter >
-     <NavBar currentUser={currentUser} authenticated={authenticated}/>
+     <NavBar currentUser={currentUser} authenticated={authenticated} setCurrentUser={setCurrentUser}/>
      <Routes>
 
        <Route path="/" element={<>   <MainPage currentUser={currentUser} authenticated={authenticated} />  </>} />

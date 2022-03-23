@@ -17,6 +17,8 @@ function StockProfile({ currentUser }) {
   const [month, setMonth] = useState(0)
   const [color, setColor] = useState('grey')
 
+  console.log('this User',currentUser)
+
   function changeDifficulty(e) {
     setGameDifficulty(e.target.name);
     setLoan();
@@ -39,6 +41,15 @@ function StockProfile({ currentUser }) {
       setColor("red")
     }
   }
+  useEffect(() => {
+    fetch(`me`)
+      .then((r) => r.json())
+      .then((turn) => {
+        setMonth(turn.turn);
+        console.log('userTurn',turn.turn);
+      });
+  }, []);
+  
   useEffect(() => {
     fetch(`me`)
       .then((r) => r.json())
@@ -287,12 +298,30 @@ function StockProfile({ currentUser }) {
       // });
 
     }
+    let newMonth = month + 1
+    let configObj1 = {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({turn: newMonth  }),
+    };
+
+    fetch(`/users/${currentUser.id}}`, configObj1)
+      .then((r) => r.json())
+      .then((data) => {
+        console.log('patching',data);
+        setMonth(newMonth)
+      });
+    
     setTime()
+
+
   }
   }
 
   function setTime(){
     setMonth(month +1)
+    
+
   }
 
   function addStock(stockPicked) {
@@ -435,6 +464,8 @@ function StockProfile({ currentUser }) {
 
 console.log('overallmystocks',myStocks)
   return (
+    <>
+    {currentUser ? 
     <section>
       <div className="difficultySlider">
         <h4>
@@ -508,6 +539,8 @@ console.log('overallmystocks',myStocks)
         </div>
       </section>
     </section>
+    : <div className="userStockAlert"><h3>Please log in or create an account in order to play this simulation of the stock market!</h3></div>}
+    </>
   );
 }
 

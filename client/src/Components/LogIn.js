@@ -39,8 +39,10 @@ function handleSubmit(e){
   <h2 className="loginIntro"> Please enter your login information here!</h2>
   <form className="loginForm">
   <h3 className="loginIntro">Enter Your User Name & Password to Login </h3>
+  <div className="loginInput">
   <input className="loginBox" type="text" name="username" placeholder="User Name" onChange={handleChange} value={formData.userName}/>  
   <input className="loginBox" type="password" name="password" placeholder="Password" onChange={handleChange} value={formData.password}/>  
+  </div>
   <button className="loginButton" type="submit" onClick={handleSubmit}>Log In</button>
   </form>
 

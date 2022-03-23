@@ -6,7 +6,18 @@ function Quiz({currenUser}){
   const [showCorrectAnswer, setshowCorrectAnswer] = useState(false)
   const [complete, setComplete] = useState(false)
   const [payout, setPayout] = useState(0)
-  
+  const [cash, setCash] = useState(0)
+
+
+
+  useEffect(() => {
+    fetch(`me`)
+      .then((r) => r.json())
+      .then((cash) => {
+        
+        setCash(cash.cash);
+      });
+  }, []);
 
   const questions = [
     {
@@ -41,55 +52,67 @@ function Quiz({currenUser}){
 }
   ]
   function handleAnswer(isCorrect){
-    
-    if(isCorrect.isCorrect){
-      console.log(payout)
-
-      if(isCorrect.difficulty === "hard"){
-        setPayout(payout + 1000)
-      }
-      if(isCorrect.difficulty === "medium"){
-        setPayout(payout + 750)
-      }
-      if(isCorrect.difficulty === "easy"){
-        setPayout(payout + 500)
-      }
-
-      
-
-    } 
     setCurrentQuestion(currentQuestion + 1)
     let nextQuestion = currentQuestion +1
     if(nextQuestion < questions.length){
       setCurrentQuestion(nextQuestion);
+    
+      if(isCorrect.isCorrect){
+      console.log(payout)
+    
+
+      if(isCorrect.difficulty === "hard"){
+        setPayout(payout + 1000)
+        console.log('payout now', payout)
+      }
+      if(isCorrect.difficulty === "medium"){
+        setPayout(payout + 750)
+        console.log('payout now', payout)
+      }
+      if(isCorrect.difficulty === "easy"){
+        setPayout(payout + 500)
+        console.log('payout now', payout)
+      }
+  
+      console.log("ending", payout)
+      
+
+    } 
+    // setPayout(payout)
+ 
     } else {
       setComplete(true)
-      console.log(payout)
+      console.log("total payout",payout)
+      // setPayout(payout)
+
+
+      let newCash = cash + payout + 500
+      let configObj1 = {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cash: newCash  }),
+      };
+
+      fetch(`/users/1}`, configObj1)
+        .then((r) => r.json())
+        .then((data) => {
+          console.log("patching",data);
+        });
+        setCash(newCash)
+        setPayout(payout + 500)
     }
 
 
-      // let configObj1 = {
-      //   method: "PATCH",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({ cash: newFunds }),
-      // };
-
-      // fetch(`/users/1}`, configObj1)
-      //   .then((r) => r.json())
-      //   .then((data) => {
-      //     console.log(data);
-      //     setFunds(newFunds);
-      //   });
     }
     let list = questions.answers
 
-  
+  // let configureCash = cash.toFixed(2)
   // console.log(currentUser)
 
   return(
     <section className="quizSection" >
       <h3 className="dailyQuiz">Daily Quiz  </h3>
-      <p class="quizIntro"> Take a quiz and earn cash for correct answers! </p>
+      <p class="quizIntro"> Take a quiz and earn cash for correct answers! Your current cash at this time is ${cash.toFixed(2)}</p>
      {complete ? (<section> <div className="score"> <h3>Thank you for completing today's quiz!</h3> 
      <h3> You gained ${payout}!</h3> 
      </div>
