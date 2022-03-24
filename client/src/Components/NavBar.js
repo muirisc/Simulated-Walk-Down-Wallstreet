@@ -13,6 +13,10 @@ function NavBar( {setCurrentUser, currentUser, authenticated}){
         })
   }
 
+  //TODO: Resettle NavBar to have Welcome and Button Sit Well Together
+  
+  
+
 
   return(
     <nav>

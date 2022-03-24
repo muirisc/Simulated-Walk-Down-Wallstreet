@@ -23,7 +23,6 @@ Stock5 = Stock.create(name:"OOPS", img:"https://i.imgur.com/ZK1qBW8.jpg", cap:"L
 Stock6 = Stock.create(name:"Mario Company", img:"https://miro.medium.com/max/800/1*XAksToqI3TyMLhcszTCmhg.png", cap:"Largecap", industry:'gaming', price:63.02 )
 Stock7 = Stock.create(name:"Canadian Beaver", img:"https://static.vecteezy.com/system/resources/previews/001/878/764/non_2x/canadian-beaver-with-flag-for-happy-canada-day-design-free-vector.jpg", cap:'Middlecap', industry:"retail", price:22.46)
 Stock8 = Stock.create(name:"Phil's Philly Cheese Steaks", img:"https://previews.123rf.com/images/squarelogo/squarelogo1701/squarelogo170100003/69165868-フィラデルフィア-チーズ-ステーキのレストランの看板.jpg", cap:"Smallcap", industry:"culinary", price: 4.50)
-Stock9 = Stock.create(name:"Woobly Tech Support", img:"https://i.imgur.com/LpDFrR6.jpg", cap:"Smallcap", industry:'tech', price:10.00)
 Stock10 = Stock.create(name:"Green Mermaid Lady", img:"https://i.imgur.com/mdz1p0m.png", cap:"Largecap", industry:"culinary", price:95.00)
 Stock11 = Stock.create(name:"Disinterested Orangutan", img:"https://nypost.com/wp-content/uploads/sites/2/2021/08/orangutan-sunglasses-52.jpg?quality=90&strip=all", cap:"sepeculative", industry:"crypto", price: 240000)
 Stock12 = Stock.create(name:"Gold", img:"https://editorial.fxstreet.com/images/Markets/Commodities/Metals/Gold/stack-of-golden-bars-in-the-bank-vault-60756080_1x1.jpg", cap:"speculative", industry:'gold', price:1816.47)
