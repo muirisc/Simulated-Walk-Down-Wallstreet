@@ -28,8 +28,8 @@ body {
   color: #fff;
   text-align: center;
   text-decoration: none;
-  padding: 12px 20px;
-  font-size: 1.4rem;
+  padding: 17px 20px;
+  font-size: 1rem;
 
 }
 .NavBar li a:hover{
@@ -40,9 +40,20 @@ ul.NavBar li.right {
   /* float: right;  */
   margin-right: 2rem;
 }
+.NavBarLoggedIn{
+  float: right;
+}
+.NavBarLoggedIn li a{
+padding: 17px 0px;
+}
 .rightButton{
-  float:right;
   margin-right: 2rem;
+}
+
+
+
+.rightButton button{
+  background-color: #DAD7CD;
 }
 .rightButton:hover{
   background-color: #DAD7CD;
