@@ -43,6 +43,9 @@ ul.NavBar li.right {
 .NavBarLoggedIn{
   float: right;
 }
+.NavBarLogin{
+  float: right;
+}
 .NavBarLoggedIn li a{
 padding: 17px 0px;
 }
@@ -380,7 +383,7 @@ box-sizing: border-box;
 .mainNews{
   /* width: 45rem; */
   margin: auto;
-  width: 80rem;
+  width: 65rem;
   float: left;
   font-size: 1.5rem;
   background-color: #DAD7CD;
@@ -394,7 +397,7 @@ box-sizing: border-box;
 .sideNews{
   width: 15rem;
   float: left;
-  margin-left: 12rem;
+  margin-left: 1rem;
   margin-bottom: 10rem;
   font-size: 1.2rem;
   background-color: #DAD7CD;
@@ -521,4 +524,42 @@ color: #DAD7CD;
 .mainPageLogin:visited{
   color:#DAD7CD;
   text-decoration: none;
+}
+
+.accountCreated{
+  margin-left: 2rem;
+}
+.accountCreation{
+  background-color: #3A5A40;
+  
+  margin: auto;
+  justify-content: center;
+  padding: 2rem;
+  margin: 5rem 15rem;
+  border-radius: 1rem;
+}
+.accountCreation h2 {
+  color:#DAD7CD;
+}
+.accountForm{
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+}
+.accountCreation label{
+  color:#DAD7CD;
+  padding: .25rem;
+  max-width: 5rem;
+}
+
+.accountCreation input{
+max-width: 20rem;
+}
+
+.signUpButton{
+  background-color: #DAD7CD;
+  margin-top: 1rem;
+}
+.signUpButton:hover{
+  background-color: #A3B18A;
+  color:#DAD7CD;
 }

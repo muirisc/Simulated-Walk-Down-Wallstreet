@@ -1,6 +1,8 @@
 import {useState} from "react";
 
 function CreateAccount(){
+const [submitted, setSubmitted] = useState(false)
+const[showPassword, setShowPassword] = useState(false)
 const [formData, setFormData] = useState({
   username: "",
   password: "",
@@ -29,19 +31,27 @@ function handleChange(e){
       setFormData({
         username: "",
         password: ""})
+        setSubmitted(!submitted)
       })}
   
 
   return(
     <>
-    <h2> Create Your Account</h2>
-    <form onSubmit={handleSubmit}>
-    <label> Username</label>
+    {submitted ? <h3 className="accountCreated">Account Created!</h3> :
+    <div className="accountCreation">
+    <h2 > Create Your Account</h2>
+    <form className="accountForm" onSubmit={handleSubmit}>
+    <label> Username:</label>
     <input type="text" name="username" value={FormData.user_name} onChange={handleChange}/>
-    <label> Password</label>
-    <input type="text" name="password" value={FormData.user_name} onChange={handleChange}/>
+    <label> Password:</label>
+    <input type="password" name="password" value={FormData.user_name} onChange={handleChange}/>
     <button className="signUpButton"type="submit"> Submit</button>
     </form>
+    
+    <button className="signUpButton"type="submit">Show Password</button>
+  
+    </div>
+}
 
 
     </>
