@@ -39,7 +39,7 @@ function handleChange(e){
     <>
     {submitted ? <h3 className="accountCreated">Account Created!</h3> :
     <div className="accountCreation">
-    <h2 > Create Your Account</h2>
+    <h2> Create Your Account</h2>
     <form className="accountForm" onSubmit={handleSubmit}>
     <label> Username:</label>
     <input type="text" name="username" value={FormData.user_name} onChange={handleChange}/>

@@ -4,7 +4,7 @@ import Login from './Components/LogIn'
 // import './App.css';
 import NavBar from "./Components/NavBar";
 import MainPage from "./Components/MainPage";
-import Interface1 from "./Components/Interface1";
+
 import StockProfile from "./Components/StockProfile";
 import AccountCreation from "./Components/CreateAccount";
 import ExplanationPage from "./Components/ExplanationPage";
