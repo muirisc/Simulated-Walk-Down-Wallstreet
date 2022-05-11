@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "react-router-dom": "^6.2.1"
+  },
+  "devDependencies": {
+    "web-vitals": "^2.1.4"
   }
 }

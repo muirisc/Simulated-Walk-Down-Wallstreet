@@ -259,9 +259,84 @@ margin: 1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-@media screen and (max-width: 600px) {
+
+/* @media screen and (max-width: 600px) {
     ul.NavBar li.right, 
     ul.NavBar li {float: none;}
+} */
+
+@media all and (min-width: 250px) {
+  .stocksSection{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .ownedStocks {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin: 2.5rem;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 1rem 0rem 0rem 0rem;
+  }
+
+}
+
+@media all and (min-width: 750px) {
+  .stocksSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+  .ownedStocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* background-color: #588157; */
+    margin: 2.5rem;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 1rem 0rem 0rem 0rem;
+  
+
+}
+}
+@media all and (min-width: 1100px) {
+  .stocksSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+  .ownedStocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2.5rem;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 1rem 0rem 0rem 0rem;
+
+}
+}
+@media all and (min-width: 1480px) {
+  .stocksSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+}
+@media all and (min-width: 1850px) {
+  .stocksSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  }
+  .ownedStocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* background-color: #588157; */
+    margin: 2.5rem;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 1rem 0rem 0rem 0rem;
+}
 }
 
 .userDataSection{
@@ -277,21 +352,19 @@ margin: 1rem;
 
 }
 
-.myStockSection{
+/* .myStockSection{
   margin: auto;
-}
+} */
 
-.ownedStocks {
+/* .ownedStocks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* background-color: #588157; */
+
   margin: 2.5rem;
   padding: 1rem;
   justify-content: center;
   border-radius: 1rem 0rem 0rem 0rem;
-
-
-}
+} */
 
 .ownedStocks * {
 box-sizing: border-box;
@@ -343,10 +416,10 @@ box-sizing: border-box;
   color: #DAD7CD;
 }
 
-.stocksSection{
+/* .stocksSection{
   display: grid;
   grid-template-columns: auto auto auto auto;
-}
+} */
 
 .stockMarketInfo{
   font-family: "Questrial", sans-serif;
