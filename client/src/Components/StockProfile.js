@@ -23,11 +23,13 @@ function StockProfile({ currentUser }) {
     setGameDifficulty(e.target.name);
     setLoan();
   }
+
   // console.log('myStocks',myStocks)
   function setLoan() {
     if (gameDifficulty === "advanced") {
-      setLoanPayment(150.0);
-      setColor("black")
+      setLoanPayment(150.00)
+      
+      
     }
     if (gameDifficulty === "medium") {
       setLoanPayment(100.0);
@@ -445,24 +447,6 @@ function StockProfile({ currentUser }) {
     }
   }
 
-  // console.log(myStocks)
-  // let newStock = [...myStocks]
-  // if(myStocks.length > 0) {
-  // myStocks.map( (searchingStock) => {
-  // if (searchingStock.id === stockPicked.id){
-  //   console.log()
-  //   console.log("Purchasing Another Share")
-  //   return false
-  // } else {
-  //   // let newStock = [...myStocks, stockPicked]
-  //   console.log("New Stock Purchased!")
-  //   setMyStocks(...myStocks, stockPicked)
-  //   return true
-
-  // }
-  // })
-
-console.log('overallmystocks',myStocks)
   return (
     <>
     {currentUser ? 
@@ -475,20 +459,20 @@ console.log('overallmystocks',myStocks)
         </h4>
          {/* <style jsx>{` .difficultySlider button {color: ${color}; }`}</style> */}
 
-        <button onClick={changeDifficulty} name="freeplay">
+        <button onClick={changeDifficulty} className={gameDifficulty === 'freeplay' ? "active" : ""} name="freeplay">
           {" "}
           Freeplay{" "}
         </button>
-        <button onClick={changeDifficulty} name="easy">
+        <button onClick={changeDifficulty} className={gameDifficulty === 'easy' ? "active" : ""} name="easy">
           {" "}
           Easy{" "}
         </button>
         {/* </button> : <button  style={{ color: "red" }} onClick={changeDifficulty} name="easy">Easy </button> } */}
 
-        <button onClick={changeDifficulty} name="medium">
+        <button onClick={changeDifficulty} className={gameDifficulty === 'medium' ? "active" : ""} name="medium">
           Medium
         </button>
-        <button onClick={changeDifficulty} name="advanced">
+        <button onClick={changeDifficulty} className={gameDifficulty === 'advanced' ? "active" : ""} name="advanced">
           Advanced
         </button>
       </div>

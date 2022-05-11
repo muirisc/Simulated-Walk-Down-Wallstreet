@@ -383,7 +383,11 @@ box-sizing: border-box;
   height: 2rem;
   width: 5rem;
   font-size: .85rem;
-  
+}
+
+.difficultySlider .active{
+  background-color: #3A5A40;
+  color:#DAD7CD;
 }
 
 .difficultySlider button:hover{
