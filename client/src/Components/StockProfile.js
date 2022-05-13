@@ -269,15 +269,18 @@ function StockProfile({ currentUser }) {
     setMonth(month + 1);
   }
 
-  function addStock(stockPicked) {
+
+
+function addStock(stockPicked) {
 let match = false;
-myStocks.forEach( (stock) => {
-if(stock.stock === stockPicked.stock){
+myStocks.forEach( (stockP) => {
+if(stockP.stock.name === stockPicked.name){
+console.log(stockP, 'stockP')
   return match = true;
 }
 })
 console.log(match, 'checking...')
-if(match = true){
+if(match === true){
   alert('You already have that stock')
 }else{
     let stockPurchase = {
