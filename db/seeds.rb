@@ -10,7 +10,7 @@ puts "Destroying seeds"
 UserStock.destroy_all
 
 Stock.destroy_all
-Investment.destroy_all
+
 User.destroy_all
 
 
@@ -24,17 +24,9 @@ Stock6 = Stock.create(name:"Mario Company", img:"https://miro.medium.com/max/800
 Stock7 = Stock.create(name:"Canadian Beaver", img:"https://static.vecteezy.com/system/resources/previews/001/878/764/non_2x/canadian-beaver-with-flag-for-happy-canada-day-design-free-vector.jpg", cap:'Middlecap', industry:"retail", price:22.46)
 Stock8 = Stock.create(name:"Phil's Philly Cheese Steaks", img:"https://previews.123rf.com/images/squarelogo/squarelogo1701/squarelogo170100003/69165868-フィラデルフィア-チーズ-ステーキのレストランの看板.jpg", cap:"Smallcap", industry:"culinary", price: 4.50)
 Stock10 = Stock.create(name:"Green Mermaid Lady", img:"https://i.imgur.com/mdz1p0m.png", cap:"Largecap", industry:"culinary", price:95.00)
-Stock11 = Stock.create(name:"Disinterested Orangutan", img:"https://nypost.com/wp-content/uploads/sites/2/2021/08/orangutan-sunglasses-52.jpg?quality=90&strip=all", cap:"sepeculative", industry:"crypto", price: 240000)
-Stock12 = Stock.create(name:"Gold", img:"https://editorial.fxstreet.com/images/Markets/Commodities/Metals/Gold/stack-of-golden-bars-in-the-bank-vault-60756080_1x1.jpg", cap:"speculative", industry:'gold', price:1816.47)
+Stock11 = Stock.create(name:"Disinterested Orangutan", img:"https://nypost.com/wp-content/uploads/sites/2/2021/08/orangutan-sunglasses-52.jpg?quality=90&strip=all", cap:"Smallcap", industry:"crypto", price: 240000)
+Stock12 = Stock.create(name:"Gold", img:"https://editorial.fxstreet.com/images/Markets/Commodities/Metals/Gold/stack-of-golden-bars-in-the-bank-vault-60756080_1x1.jpg", cap:"Smallcap", industry:'gold', price:1816.47)
 Stock13 = Stock.create(name:"Insho", img:"https://i.imgur.com/Il51x5R.jpg", cap: "Largecap", industry: "tech", price:48.45)
 Stock14 = Stock.create(name:"Omega", img:"https://i.imgur.com/JcpgR1C.jpg?1", cap: "Largecap", industry:"airline", price: 45.11)
-# User1 = User.create(id: 5, username:"test", password:"test", cash: 10000.00, turn: 0, quiz_taken: false)
-# UserStock1 = UserStock.create(user_id: User1.id, stock_id: Stock1.id, stock_count: 1)
-#Stocks
-# t.string :name
-# t.string :type
-# t.string :industry
 
-# t.float :price
-# t.float :market_cap
 # puts "Seeding Complete!"                   
