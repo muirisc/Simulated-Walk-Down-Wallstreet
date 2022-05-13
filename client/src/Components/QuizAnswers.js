@@ -1,7 +1,11 @@
 function QuizAnswers( {question}){
 
-  let questionAnswers = question.answers.filter((question1) =>{
-    if(question1.isCorrect === true){
+
+  let completeQuestions = question;
+  console.log(completeQuestions)
+
+  let questionAnswers = completeQuestions.answers.filter((question) =>{
+    if(question.isCorrect === true){
       return true
     }})  
 

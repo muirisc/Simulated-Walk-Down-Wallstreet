@@ -1,12 +1,17 @@
 import {useState, useEffect} from "react";
 import QuizAnswers from "./QuizAnswers";
 
-function Quiz({currenUser}){
+function Quiz({currentUser}){
   const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [showCorrectAnswer, setshowCorrectAnswer] = useState(false)
   const [complete, setComplete] = useState(false)
   const [payout, setPayout] = useState(0)
-  const [cash, setCash] = useState(0)
+  const [cash, setCash] = useState(0);
+  const [showFinal, setShowFinal] = useState(false)
+
+  // useEffect( () => {
+  //   // checkAnswers();
+  // }, [patchCash])
+
 
 
 
@@ -49,65 +54,78 @@ function Quiz({currenUser}){
     {answerText: "Gold", isCorrect: false, difficulty: "easy"},
     {  difficulty: "easy"}
   ]
+},
+{
+  question: "Great Work! You have completed the quiz. See your answer by clicking below.",
+  answers: [
+    {answerText: "See Results", isCorrect: true, difficulty: ''}
+  ]
 }
   ]
+
+
+
+  function checkAnswers(isCorrect){
+    if(isCorrect.isCorrect){
+      console.log(payout)
+    
+
+      if(isCorrect.difficulty === "hard"){
+        setPayout((payout) =>{ return payout + 1000});
+        console.log('payout now 1', payout)
+      }
+      if(isCorrect.difficulty === "medium"){
+        setPayout(payout + 750)
+        console.log('payout now 2', payout)
+      }
+      if(isCorrect.difficulty === "easy"){
+        setPayout(payout + 500)
+        console.log('payout now 3', payout)
+      }
+      if(isCorrect.difficult === ''){
+        return payout
+      }
+    } 
+
+  }
   function handleAnswer(isCorrect){
     setCurrentQuestion(currentQuestion + 1)
     let nextQuestion = currentQuestion +1
     if(nextQuestion < questions.length){
       setCurrentQuestion(nextQuestion);
-    
-      if(isCorrect.isCorrect){
-      console.log(payout)
-    
-
-      if(isCorrect.difficulty === "hard"){
-        setPayout(payout + 1000)
-        console.log('payout now', payout)
-      }
-      if(isCorrect.difficulty === "medium"){
-        setPayout(payout + 750)
-        console.log('payout now', payout)
-      }
-      if(isCorrect.difficulty === "easy"){
-        setPayout(payout + 500)
-        console.log('payout now', payout)
-      }
-  
-      console.log("ending", payout)
-      
-
-    } 
-    // setPayout(payout)
- 
+      checkAnswers(isCorrect);
+      console.log('firing x')
     } else {
-      setComplete(true)
-      console.log("total payout",payout)
-      // setPayout(payout)
+      setComplete(true);
+      patchCash();
+    }
+  }
 
 
-      let newCash = cash + payout + 500
+  function patchCash(){
+      let newCash = cash + payout;
+      console.log('paying out', payout)
+
       let configObj1 = {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ cash: newCash  }),
       };
 
-      fetch(`/users/1}`, configObj1)
+      fetch(`/users/${currentUser.id}}`, configObj1)
         .then((r) => r.json())
         .then((data) => {
           console.log("patching",data);
         });
-        setCash(newCash)
-        setPayout(payout + 500)
+        setPayout(payout);
+        setCash(newCash);
     }
 
 
-    }
-    let list = questions.answers
-
-  // let configureCash = cash.toFixed(2)
-  // console.log(currentUser)
+    let results = questions.filter((question) =>{
+      if(question.answers.length > 1){
+        return true
+      }})  
 
   return(
     <section className="quizSection" >
@@ -118,7 +136,7 @@ function Quiz({currenUser}){
      </div>
 
      <h4 class="correctionH4"> Correct Answers</h4>
-     {questions.map((question) =>(
+     {results.map((question) =>(
        <QuizAnswers question={question} />
      ))}
      </section>) : (

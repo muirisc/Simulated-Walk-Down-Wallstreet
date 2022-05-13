@@ -499,10 +499,11 @@ box-sizing: border-box;
 .quiz{
   background-color: #A3B18A;
   width: 50rem;
+height: 23rem;
   padding: 2rem;
   margin: auto;
   border-radius: 1rem;
-  border: .25rem solid #3A5A40
+  border: .25rem solid #3A5A40;
 }
 
 .quizIntro{
