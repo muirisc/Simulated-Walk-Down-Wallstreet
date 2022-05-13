@@ -10,7 +10,6 @@ function StockProfile({ currentUser }) {
   const [value, setValue] = useState(0);
   const [loanPayment, setLoanPayment] = useState(0);
   const [gameDifficulty, setGameDifficulty] = useState("freeplay");
-  const [event, setEvent] = useState("Normal Day");
   const [month, setMonth] = useState(0);
 
   useEffect(() => {
@@ -172,7 +171,7 @@ function StockProfile({ currentUser }) {
           fetch(`/stocks/${stock.id}`, config)
             .then((r) => r.json())
             .then((newPrice) => {
-              console.log("Prices dropped from Stock Crash", newPrice);
+              alert("Prices dropped from Stock Crash", newPrice);
             });
           setStocks([...allStocks, stock]);
           alert("STOCK CRASH!");
@@ -191,7 +190,7 @@ function StockProfile({ currentUser }) {
           fetch(`/stocks/${addStock.id}`, config)
             .then((r) => r.json())
             .then((newPrice) => {
-              console.log("new Large-cap pirces", newPrice);
+              console.log("new Large-cap prices", newPrice);
             });
           addStock.price = newStockPrice;
           let completedStocks = [...allStocks, addStock];
@@ -257,7 +256,6 @@ function StockProfile({ currentUser }) {
       fetch(`/users/${currentUser.id}}`, configObj1)
         .then((r) => r.json())
         .then((data) => {
-          console.log("patching", data);
           setMonth(newMonth);
         });
 
@@ -275,11 +273,9 @@ function addStock(stockPicked) {
 let match = false;
 myStocks.forEach( (stockP) => {
 if(stockP.stock.name === stockPicked.name){
-console.log(stockP, 'stockP')
   return match = true;
 }
 })
-console.log(match, 'checking...')
 if(match === true){
   alert('You already have that stock')
 }else{
@@ -299,11 +295,9 @@ if(match === true){
     fetch("/user_stock", config)
       .then((r) => r.json())
       .then((newStock) => setMyStocks([...myStocks, newStock]));
-    console.log("added Stock and now these are your stocks", myStocks);
   }}
 
   function purchaseMoreStock(stockPicked) {
-    console.log("purchasing Stock", stockPicked);
 
     let newFunds = funds - stockPicked.stock.price;
 
@@ -319,7 +313,6 @@ if(match === true){
       fetch(`/users/${currentUser.id}}`, configObj1)
         .then((r) => r.json())
         .then((data) => {
-          console.log(data);
           setFunds(newFunds);
         });
 
@@ -330,7 +323,7 @@ if(match === true){
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ stock_count: submitCount }),
       };
-      console.log("id", stockPicked.id);
+
       fetch(`/user_stocks/${stockPicked.id}`, configObj)
         .then((r) => r.json())
         .then((data) => {
@@ -346,7 +339,7 @@ if(match === true){
     let newStockCount = stockPicked.stock_count - 1;
 
     if (newStockCount < 0) {
-      console.log("You do not have another stock to sell!");
+      alert("You do not have another stock to sell!");
     } else {
       let newFunds = funds + stockPicked.stock.price;
       let configObj1 = {
@@ -384,7 +377,6 @@ if(match === true){
       alert("Please sell off your stock before deleting this card");
     } else {
       let config = { method: "DELETE" };
-      console.log("delete process", deleteStock.stock.id);
       fetch(`/user_stocks/${deleteStock.id}`, config);
       let destroyStock = myStocks.filter(
         (stock) => stock.id !== deleteStock.id
