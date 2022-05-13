@@ -1,5 +1,6 @@
 function NavBar( {setCurrentUser, currentUser, authenticated}){
 
+
   // console.log('Current User',currentUser)
 // let dollars = {currentUser.cash}
   // const userFunds = (dollars).toFixed(2)

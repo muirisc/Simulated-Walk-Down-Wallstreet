@@ -7,11 +7,13 @@ function Quiz({currentUser}){
   const [payout, setPayout] = useState(0)
   const [cash, setCash] = useState(0);
   const [showFinal, setShowFinal] = useState(false)
+  const [quizStatus, setQuizStatus] = useState(false)
 
   // useEffect( () => {
   //   // checkAnswers();
   // }, [patchCash])
 
+ 
 
 
 
@@ -19,8 +21,16 @@ function Quiz({currentUser}){
     fetch(`me`)
       .then((r) => r.json())
       .then((cash) => {
-        
         setCash(cash.cash);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch(`me`)
+      .then((r) => r.json())
+      .then((currentUser) => {
+        setQuizStatus(currentUser.quiz_taken);
+        console.log(currentUser.quiz_taken)
       });
   }, []);
 
@@ -97,7 +107,11 @@ function Quiz({currentUser}){
       console.log('firing x')
     } else {
       setComplete(true);
+      if(quizStatus === false){
       patchCash();
+      }else{
+        alert('You have already taken the quiz today and cannot receive further cash until tomorrow!')
+      }
     }
   }
 
@@ -119,6 +133,18 @@ function Quiz({currentUser}){
         });
         setPayout(payout);
         setCash(newCash);
+
+        let configObj2 = {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({quiz_taken: true}),
+        };
+  
+        fetch(`/users/${currentUser.id}}`, configObj2)
+          .then((r) => r.json())
+          .then((data) => {
+            console.log("patching",data);
+          });
     }
 
 
@@ -127,9 +153,14 @@ function Quiz({currentUser}){
         return true
       }})  
 
-  return(
+
+  
+      return(
+        
+
     <section className="quizSection" >
       <h3 className="dailyQuiz">Daily Quiz  </h3>
+      {quizStatus ? <h3 className="quizAlert"> You have already taken the quiz today!</h3> : null}
       <p class="quizIntro"> Take a quiz and earn cash for correct answers! Your current cash at this time is ${cash.toFixed(2)}</p>
      {complete ? (<section> <div className="score"> <h3>Thank you for completing today's quiz!</h3> 
      <h3> You gained ${payout}!</h3> 
