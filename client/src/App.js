@@ -8,7 +8,7 @@ import MainPage from "./Components/MainPage";
 import StockProfile from "./Components/StockProfile";
 import AccountCreation from "./Components/CreateAccount";
 import ExplanationPage from "./Components/ExplanationPage";
-import News from "./Components/News";
+
 import Quiz from "./Components/Quiz";
 
 // require('react-dom');
@@ -51,7 +51,6 @@ function App() {
        <Route path="/login" element={<>   <Login currentUser={currentUser} setCurrentUser={setCurrentUser}/>  </>} />
        <Route path="/createAccount" element={<>   <AccountCreation/>  </>} />
        <Route path="/ExplanationPage" element={<> <ExplanationPage/> </>} />
-       <Route path="/news" element={<> <News/> </>} />
        <Route path="/quiz" element={<> <Quiz currentUser={currentUser}/> </>} />
 </Routes>
   </BrowserRouter>

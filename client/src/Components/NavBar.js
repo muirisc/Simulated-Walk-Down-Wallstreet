@@ -25,7 +25,6 @@ function NavBar( {setCurrentUser, currentUser, authenticated}){
     <li> <a href="/">Home</a></li>
     <li> <a href="/ExplanationPage"> Basics of the Stock Market</a></li>
     <li> <a href="/stocks">Stock Game</a></li>
-    <li> <a href="/news">The Business</a></li>
     <li> <a href="/quiz">Daily Quiz</a></li>
     {/* <li><a>{currentUser.cash}</a></li> */}
     {/* <li> <a>Welcome { currentUser ? currentUser.username : null}</a></li> */}
