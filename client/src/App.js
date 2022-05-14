@@ -1,19 +1,14 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import {useState, useEffect, Component} from "react";
 import Login from './Components/LogIn'
-// import './App.css';
 import NavBar from "./Components/NavBar";
 import MainPage from "./Components/MainPage";
-
 import StockProfile from "./Components/StockProfile";
 import AccountCreation from "./Components/CreateAccount";
 import ExplanationPage from "./Components/ExplanationPage";
-
 import Quiz from "./Components/Quiz";
 
-// require('react-dom');
-// window.React2 = require('react');
-// console.log(window.React1 === window.React2);
+
 
 
 function App() {

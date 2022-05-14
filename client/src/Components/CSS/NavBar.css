@@ -1,0 +1,66 @@
+.NavBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 3rem;
+
+  background-color: #3A5A40;
+  color: #DAD7CD;
+  
+}
+
+.NavBar li{
+  float: left;
+  
+}
+
+.NavBar li a{
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 17px 20px;
+  font-size: 1rem;
+
+}
+.NavBar li a:hover{
+  background-color: #A3B18A;
+}
+
+ul.NavBar li.right {
+  /* float: right;  */
+  margin-right: 2rem;
+}
+.NavBarLoggedIn{
+  float: right;
+}
+.NavBarLogin{
+  float: right;
+}
+.NavBar .NavLogOut:hover{
+background-color: #3A5A40;
+}
+.NavBar .NavLogOut:hover button{
+  background-color: #210F04;
+  color: #DAD7CD;
+}
+.NavBarLoggedIn li a{
+padding: 17px 0px;
+}
+.rightButton{
+  margin-right: 2rem;
+}
+
+
+
+.rightButton button{
+  background-color: #DAD7CD;
+}
+.rightButton:hover{
+  background-color: #DAD7CD;
+}
+.rightButton button:hover{
+  background-color: #3A5A40;
+  color:#DAD7CD;
+}

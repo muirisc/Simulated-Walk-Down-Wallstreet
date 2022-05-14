@@ -1,0 +1,20 @@
+.mainPageIntro{
+  color: black;
+  margin-left: 2rem;
+  font-family: 'Questiral', sans-serif;
+  text-align: center;
+}
+
+.mainPage img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  justify-content: center;
+  border: 2rem #333;
+  border-radius: .5rem;
+  max-height: 40rem;
+  width: inherit;
+}
+.mainPage p{
+  text-align: center;
+}

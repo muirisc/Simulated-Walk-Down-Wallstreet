@@ -1,94 +1,22 @@
 body {
   margin: 0;
   font-family: "Questrial", sans-serif;
-  color: #210F04;
-  background-color: #DAD7CD;
-  
-}
-
-.NavBar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 3rem;
-
-  background-color: #3A5A40;
-  color: #DAD7CD;
-  
-}
-
-.NavBar li{
-  float: left;
-  
-}
-
-.NavBar li a{
-  display: block;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  padding: 17px 20px;
-  font-size: 1rem;
-
-}
-.NavBar li a:hover{
-  background-color: #A3B18A;
-}
-
-ul.NavBar li.right {
-  /* float: right;  */
-  margin-right: 2rem;
-}
-.NavBarLoggedIn{
-  float: right;
-}
-.NavBarLogin{
-  float: right;
-}
-.NavBar .NavLogOut:hover{
-background-color: #3A5A40;
-}
-.NavBar .NavLogOut:hover button{
-  background-color: #210F04;
-  color: #DAD7CD;
-}
-.NavBarLoggedIn li a{
-padding: 17px 0px;
-}
-.rightButton{
-  margin-right: 2rem;
-}
-
-
-
-.rightButton button{
-  background-color: #DAD7CD;
-}
-.rightButton:hover{
-  background-color: #DAD7CD;
-}
-.rightButton button:hover{
-  background-color: #3A5A40;
-  color:#DAD7CD;
+  color: #210f04;
+  background-color: #dad7cd;
 }
 
 .loginBox {
-border-radius: .25rem;
-/* margin-left: 2.5rem; */
-margin: 1rem;
-
+  border-radius: 0.25rem;
+  margin: 1rem;
 }
-
 
 .loginIntro {
   margin-left: 2rem;
-  font-family: 'Source Serif Pro', serif;
+  font-family: "Source Serif Pro", serif;
 }
-
-.loginSection{
-  background-color: #A3B18A;
-  font-family: 'Source Serif Pro', serif;
+.loginSection {
+  background-color: #a3b18a;
+  font-family: "Source Serif Pro", serif;
   justify-content: center;
   max-width: 45rem;
   max-height: inherit;
@@ -98,534 +26,67 @@ margin: 1rem;
   margin-top: 3rem;
 }
 
-.loginSection h2  {
+.loginSection h2 {
   text-align: center;
 }
-
 
 .loginSection h3 {
   text-align: center;
 }
 
-.loginSection input{
+.loginSection input {
   justify-content: center;
   margin: auto;
 }
-.loginInput input{
+.loginInput input {
   margin: 1rem;
   justify-content: center;
 }
 
-.loginButton{
+.loginButton {
   margin-left: 2.5rem;
   margin-top: 1rem;
-  background-color: #DAD7CD;
+  background-color: #dad7cd;
 }
 
-.mainPageIntro{
-  color: black;
-  margin-left: 2rem;
-  font-family: 'Questiral', sans-serif;
-  text-align: center;
-}
-
-.mainPage img{
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  /* justify-content: center; */
-  border: 2rem #333;
-  border-radius: .5rem;
-  max-height: 40rem;
-  width: inherit;
- 
-}
-.mainPage p{
-  text-align: center;
-}
-
-
-
-
-.interface1{
+.interface1 {
   margin-left: 2rem;
 }
 
-
-.card{
-  margin: 2rem 1rem;
-  padding: 1.5rem;
-  background-color: thistle;
-  display: block;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-radius: .5rem;
-  max-width: 15rem;
-  height: inherit;
-}
-
-.card h3{
-  text-align: center;
-  color: #fff;
-  margin-top: 0rem;
-}
-
-.stocksSelection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.deleteButton{
-  max-height:1rem;
-  max-width: 2rem;
-  background-color: #DAD7CD;
-  margin: .5rem;
-  padding: 0;
-  border-radius: 1rem;
-}
-.deleteButton:hover{
-  background-color: #3A5A40;
-  color:#DAD7CD;
-}
-.myStockCard{
-  max-height: 25rem;
-  width: 28rem;
-  background-color: #A3B18A;
-  margin: .5rem 0rem .5rem 1rem;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-  border-radius: 2rem;
-  text-transform: capitalize;
-  box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.2);
-}
-.myStockCard img {
-  height: 100px;
-  width: inherit;
-  width: 90%;
-  border-radius: 1rem;
-  background-color: #A3B18A;
-}
-
-.myStockCard .myStockButton {
-  background-color: #DAD7CD;
-  border-radius: 1rem;
-  height: 1.5rem;
-  width: 12rem;
-  justify-content: center;
-  margin: .25rem;
-}
-.myStockCard .myStockButton:hover {
-  background-color: #3A5A40;
-  color: #DAD7CD
-}
-
-.myStockCard li {
-  text-decoration: none;
-  list-style-type: none;
-  margin-top: .5rem;
-}
-
-.stockCard{
-  height: 12rem;
-  width: 20rem;
-  background-color: #A3B18A;
-  margin: .5rem 0rem 1rem 1rem;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-  border-radius: 2rem;
-  text-transform: capitalize;
-  box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.2);
-}
-
-.stockCard img {
-  max-height: 100px;
-  max-width: inherit;
-  width: 90%;
-  border-radius: 1rem;
-}
-
-.stockCard button {
-  background-color: #DAD7CD;
-  border-radius: 1rem;
-  height: 1.5rem;
-  width: 12rem;
-  justify-content: center;
-  margin: .25rem;
-}
-
-.stockCard button:hover{
-  background-color: #3A5A40;
-  color: #DAD7CD
-}
-
-.stockCard li {
-  text-decoration: none;
-  list-style-type: none;
-  margin-top: .5rem;
-}
-
-.stockDisplay{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-
-/* @media screen and (max-width: 600px) {
-    ul.NavBar li.right, 
-    ul.NavBar li {float: none;}
-} */
-
-@media all and (min-width: 250px) {
-  .stocksSection{
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .ownedStocks {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    margin: 2.5rem;
-    padding: 1rem;
-    justify-content: center;
-    border-radius: 1rem 0rem 0rem 0rem;
-  }
-
-}
-
-@media all and (min-width: 750px) {
-  .stocksSection{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-  }
-  .ownedStocks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* background-color: #588157; */
-    margin: 2.5rem;
-    padding: 1rem;
-    justify-content: center;
-    border-radius: 1rem 0rem 0rem 0rem;
-  
-
-}
-}
-@media all and (min-width: 1100px) {
-  .stocksSection{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-  }
-  .ownedStocks {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 2.5rem;
-    padding: 1rem;
-    justify-content: center;
-    border-radius: 1rem 0rem 0rem 0rem;
-
-}
-}
-@media all and (min-width: 1480px) {
-  .stocksSection{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-  }
-}
-@media all and (min-width: 1850px) {
-  .stocksSection{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-  }
-  .ownedStocks {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* background-color: #588157; */
-    margin: 2.5rem;
-    padding: 1rem;
-    justify-content: center;
-    border-radius: 1rem 0rem 0rem 0rem;
-}
-}
-
-.userDataSection{
-  /* float: center; */
-
-  justify-content: center;
-  background-color: yellow;
-  color: green
-}
-
-.userDataSection h3{
-  margin-left: 4rem;
-
-}
-
-/* .myStockSection{
-  margin: auto;
-} */
-
-/* .ownedStocks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
-  margin: 2.5rem;
-  padding: 1rem;
-  justify-content: center;
-  border-radius: 1rem 0rem 0rem 0rem;
-} */
-
-.ownedStocks * {
-box-sizing: border-box;
-}
-.ownedStockCarousel{
-  transform-style: preserve-3d
-}
-.mainPage {
-  margin-left: 2rem;
-}
-.difficultySlider{
-  margin: 1rem;
-}
-
-.difficultySlider button{
-  height: 2rem;
-  width: 5rem;
-  font-size: .85rem;
-}
-
-.difficultySlider .active{
-  background-color: #3A5A40;
-  color:#DAD7CD;
-}
-
-.difficultySlider button:hover{
-  background-color: #3A5A40;
-  color: #DAD7CD;
-}
-.userStockInfo{
-  background-color: #DAD7CD;
-  border: .3rem solid #3A5A40;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  /* justify-content: center; */
-  max-height: 25rem;
-  max-width: 25rem;
-
-}
-
-.userStockInfo button{
-  background-color: #DAD7CD;
-  border-radius: .5rem;
+.mainPageLogin {
+  background-color: #dad7cd;
+  border-radius: 0.5rem;
   height: 2rem;
   width: 8rem;
-  font-size: .85rem;
-  border: .25rem solid #3A5A40;
-}
-
-.userStockInfo button:hover{
-  background-color: #3A5A40;
-  color: #DAD7CD;
-}
-
-/* .stocksSection{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-} */
-
-.stockMarketInfo{
-  font-family: "Questrial", sans-serif;
-  margin-top: 0rem;
-  padding-left: 1rem;
-  font-size: 1.5rem;
-  background-color: #DAD7CD;
-}
-.stockMarketInfo p{
-  margin-left: 1rem;
-  font-size: 1.2rem;
-}
-
-.YourStocks{
-  margin-left: 2rem;
-}
-
-.newsHeading{
-  font-size: 6rem;
-/* margin-left: 20rem; */
-  /* float: left; */
-  text-align: center;
-}
-
-.newsSections{
-  display: table;
-  grid-template-columns: 1fr 2fr 1fr;
-  text-align: center;
-  margin-left: 2rem;
-  background-color: #A3B18A;
-  padding: 2rem;
-  border-radius: .5rem;
-}
-.mainNews{
-  /* width: 45rem; */
-  margin: auto;
-  width: 65rem;
-  float: left;
-  font-size: 1.5rem;
-  background-color: #DAD7CD;
-  padding: 2rem;
-
-  
-}
-.newSection{
-  /* background-color: #A3B18A; */
-}
-.sideNews{
-  width: 15rem;
-  float: left;
-  margin-left: 1rem;
-  margin-bottom: 10rem;
-  font-size: 1.2rem;
-  background-color: #DAD7CD;
-  padding: 1rem;
-  /* border-radius: 2rem;; */
-}
-.dailyQuiz{
-  font-size: 2.5rem;
-  margin-left: 1rem;
-}
-.quiz{
-  background-color: #A3B18A;
-  width: 50rem;
-height: 23rem;
-  padding: 2rem;
-  margin: auto;
-  border-radius: 1rem;
-  border: .25rem solid #3A5A40;
-}
-
-.quizIntro{
-  font-size: 1.5rem;
-  margin-left: 3rem;
-}
-.question{
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.answers{
-  display: block;
-  margin-left: 2rem;
-  margin: auto;
-  align-content: center; 
-  grid-template-rows: auto auto auto auto;
-}
-.answer{
-  margin: 1rem;
-  font-size: 1.9rem;
-}
-
-
-.answer:hover{
-font-size: 2.5rem;
-color: #DAD7CD;
-
-}
-
-.quizSection h4{
-  margin-left: 1.5rem;
-  font-size: 1.5rem;
-}
-.quizSection h3{
-  margin-left: 2rem;
-}
-.quizAnswers{
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  background-color: #A3B18A;
-  border-radius: 1rem;
-  border: .25rem solid #3A5A40;
-  width: 75rem;
-
-}
-.answerQuestion{
-  font-size: 1.5rem;
-}
-.answerText{
-  margin-left: 4rem;
-  font-size: 1.5rem;
-}
-.quizAlert{
-  margin-left: 4rem;
-  color:#3A5A40;
-  font-size: 32px;
-}
-
-.score{
-  background-color: #DAD7CD;
-  border: .25rem solid #3A5A40;
-  border-radius: 1rem;
-  width: 30rem;
-  margin-left: 2rem;
-}
-.sNews{
-  border-top: solid #210F04;
-}
-
-.fullNews{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.userStockAlert{
-  margin: auto;
-  background-color: #A3B18A;
-  padding: 1rem;
-  margin-top: 1rem;
-  text-align: center;
-  max-width: 30rem;
-  font-weight: 700;
-  border-radius: 1rem;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.mainPageLogin{
-  background-color: #DAD7CD;
-  border-radius: .5rem;
-  height: 2rem;
-  width: 8rem;
-  font-size: .85rem;
-  border: .25rem solid #3A5A40;
+  font-size: 0.85rem;
+  border: 0.25rem solid #3a5a40;
   margin: auto;
   justify-content: center;
   margin-bottom: 3rem;
   position: absolute;
   left: 47%;
 }
-.mainPageLogin a{
+.mainPageLogin a {
   text-decoration: none;
-  color:#3A5A40;
+  color: #3a5a40;
 }
 
-.mainPageLogin a:hover{
- background-color: #3A5A40;
-  color: #DAD7CD;
+.mainPageLogin a:hover {
+  background-color: #3a5a40;
+  color: #dad7cd;
 }
 
-.mainPageLogin:visited{
-  color:#DAD7CD;
+.mainPageLogin:visited {
+  color: #dad7cd;
   text-decoration: none;
 }
 
-.accountCreated{
+.accountCreated {
   margin-left: 2rem;
 }
-.accountCreation{
-  background-color: #3A5A40;
-  
+.accountCreation {
+  background-color: #3a5a40;
+
   margin: auto;
   justify-content: center;
   padding: 2rem;
@@ -633,27 +94,27 @@ color: #DAD7CD;
   border-radius: 1rem;
 }
 .accountCreation h2 {
-  color:#DAD7CD;
+  color: #dad7cd;
 }
-.accountForm{
+.accountForm {
   display: grid;
   grid-template-columns: 1fr 10fr;
 }
-.accountCreation label{
-  color:#DAD7CD;
-  padding: .25rem;
+.accountCreation label {
+  color: #dad7cd;
+  padding: 0.25rem;
   max-width: 5rem;
 }
 
-.accountCreation input{
-max-width: 20rem;
+.accountCreation input {
+  max-width: 20rem;
 }
 
-.signUpButton{
-  background-color: #DAD7CD;
+.signUpButton {
+  background-color: #dad7cd;
   margin-top: 1rem;
 }
-.signUpButton:hover{
-  background-color: #A3B18A;
-  color:#DAD7CD;
+.signUpButton:hover {
+  background-color: #a3b18a;
+  color: #dad7cd;
 }

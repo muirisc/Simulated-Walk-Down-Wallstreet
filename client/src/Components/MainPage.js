@@ -1,4 +1,4 @@
-import LogIn from "./LogIn";
+import "./CSS/MainPage.css";
 
 function MainPage({currentUser, authenticated}){
 

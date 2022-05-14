@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Stock from "./Stock";
 import MyStock from "./MyStock";
+import "./CSS/StockGame.css";
 
 function StockProfile({ currentUser }) {
   const [funds, setFunds] = useState(0);
